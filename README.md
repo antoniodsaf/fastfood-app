@@ -4,7 +4,7 @@ Serviço responsável por manter produções de pedidos fastfood.
 
 ## 🏛👷 Arquitetura
 
-O serviço foi desenvolvida utilizando o padrão de arquitetura hexagonal, onde a pasta/camada `app` é o centro da aplicação e as camadas `infra` e `adapter` são periféricas.
+O serviço foi desenvolvido utilizando o padrão de arquitetura hexagonal, onde a pasta/camada `app` é o centro da aplicação e as camadas `infra` e `adapter` são periféricas.
 
 A camada `app` é <strong>agnóstica</strong>, ela depende só de si mesma, portanto ela não se comunica com camadas periféricas, entretanto as camadas periféricas (`infra` e `adapter`) se comunicam com ela. 
  
