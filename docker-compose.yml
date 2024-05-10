@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: fastfood
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/ddl.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - PORT=${PORT}
+      - DATABASE_HOST=db
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
