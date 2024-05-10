@@ -70,7 +70,7 @@ $ npm run start:dev
 
 ```
 
-## Linguagem ubíqua
+## 📖 Linguagem ubíqua
 
 Termo   | Definição
 ------- | ------
