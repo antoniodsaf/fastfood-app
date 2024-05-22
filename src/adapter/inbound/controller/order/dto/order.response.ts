@@ -22,13 +22,13 @@ export class OrderResponse {
         productName: 'Hamburger',
         productPrice: 25.5,
         quantity: 2,
-        price: 50
+        price: 51
       }
     ]
   })
   readonly orderItems: OrderItemResponse[];
   @ApiProperty({
-    example: 50
+    example: 51
   })
   readonly price: number;
   @ApiProperty({
