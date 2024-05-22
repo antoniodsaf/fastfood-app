@@ -20,7 +20,8 @@ import { CreateProductRequest } from './dto/create.product.request';
 import { ProductResponse } from './dto/product.response';
 import { UpdateProductRequest } from './dto/update.product.request';
 import { ApiOkResponseWrapper } from '@util/api.ok.response.wrapper';
-import { ApiQuery } from '@nestjs/swagger';
+import { ApiParam, ApiQuery } from '@nestjs/swagger';
+import { ProductCategory } from '@app/core/domain/product/valueobject/product.category';
 
 @Controller('/products')
 export class ProductController {
@@ -77,6 +78,10 @@ export class ProductController {
     type: Boolean,
     description: "'disabled query param' é opcional, valor padrao é 'false'.",
     required: false
+  })
+  @ApiParam({
+    name: 'value',
+    enum: ProductCategory
   })
   async findByCategory(
     @Param('value') category: string,
