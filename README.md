@@ -83,3 +83,8 @@ Checkout | Etapa importante em sistemas de comércio eletrônico, onde os client
 Cozinha | Pessoa responsável por mover status do pedido.
 Cliente | Pessoa que solicita e recebe o pedido.
 Status | Se refere ao estado ou condição que o pedido se encontra.
+
+## Kubernetes arquitetura
+
+<img src="docs/phase2-Arquitetura.drawio.png" />
+

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-fastfood
+data:
+  DATABASE_HOST: "svc-db-fastfood"
+  DATABASE_PORT: "5432"
+  DATABASE_USER: "root"
+  DATABASE_PASS: "123"
+  DATABASE_NAME: "fastfood"
