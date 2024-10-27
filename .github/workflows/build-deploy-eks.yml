@@ -1,4 +1,4 @@
-name: Deploy AWS Academy - EKS
+name: Build/Deploy fastfood-app - AWS EKS
 
 on:
   push:
