@@ -3,7 +3,7 @@ name: Build/Deploy fastfood-app - AWS EKS
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   REGION_DEFAULT: "us-east-1"
