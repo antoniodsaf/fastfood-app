@@ -11,7 +11,7 @@ env:
 
 jobs:
   deploy:
-    name: Deploy AWS Academy
+    name: Build/deploy fastfood-app - AWS EKS
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,10 +40,11 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/fiap-fastfood:latest
         
-      #- name: Update Kube Config
-      #  run: aws eks update-kubeconfig --name ${{ env.CLUSTER_NAME }} --region ${{ env.REGION_DEFAULT }}
+      - name: Update Kube Config
+        run: aws eks update-kubeconfig --name ${{ env.CLUSTER_NAME }} --region ${{ env.REGION_DEFAULT }}
 
-      #- name: Kube Apply
-      #  run: |
-      #    kubectl apply -f k8s/eks/deployment.yaml
-      #    kubectl apply -f k8s/eks/svc.yaml
+      - name: Kube Apply
+        run: |
+          kubectl apply -f k8s/eks/configmap.yaml
+          kubectl apply -f k8s/eks/deployment.yaml
+          kubectl apply -f k8s/eks/svc.yaml
