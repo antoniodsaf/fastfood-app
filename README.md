@@ -84,7 +84,17 @@ Cozinha | Pessoa responsável por mover status do pedido.
 Cliente | Pessoa que solicita e recebe o pedido.
 Status | Se refere ao estado ou condição que o pedido se encontra.
 
-## Kubernetes arquitetura
+## Kubernetes (fase 02)
 
 <img src="docs/phase2-Arquitetura.drawio.png" />
 
+## Arquitetura no cloud provider AWS (fase 03)
+
+<img src="docs/phase3-Arquitetura.drawio.png" />
+
+### Abaixo estao os respectivos repositorios que compoe/monta a ilustracao acima
+- RDS - PostgreSQL (https://github.com/antoniodsaf/fastfood-db)   
+- Cognito - Identity Provider (https://github.com/antoniodsaf/fastfood-cognito)
+- Lambda Authorizer (https://github.com/antoniodsaf/fastfood-lambda-auth)
+- Cluster EKS (https://github.com/antoniodsaf/fastfood-eks)
+- API Gateway (https://github.com/antoniodsaf/fastfood-api-gateway)
