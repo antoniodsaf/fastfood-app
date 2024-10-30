@@ -1,4 +1,4 @@
-# Serviço fastfood com arquitetura hexagonal
+# fastfood-app
 
 Serviço responsável por manter produções de pedidos fastfood.
 
@@ -15,7 +15,7 @@ Abaixo uma imagem representativa:
 <img src="docs/phase1-Arquitetura-hexagonal.drawio.png" />
 
 
-## 👷🏃 Como construir e executar?
+## 👷🏃 Como construir e executar local?
 
 O desenvolvimento deste foi feito em cima da plataforma de desenvolvimento nodejs (com nestjs) e banco de dados postgresql para a persistência dos dados, portanto é recomendado as seguintes versões para a execução local:
 ```
