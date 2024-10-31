@@ -12,6 +12,4 @@ RUN npm run build
 
 EXPOSE 3000
 
-ENV SWAGGER_URL="api/swagger"
-
 CMD [ "npm", "run", "start:prod" ]
